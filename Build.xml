@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="MyProject" default="gen-reports" basedir=".">
+  <!-- set global properties for this build -->
+  <property name="test.reports" value="..\reports" />
+  <target name="gen-reports">
+    <junitreport todir="${test.reports}">
+       <fileset dir="${test.reports}">
+          <include name="TEST-*.xml" />
+       </fileset>
+       <report todir="${test.reports}" />
+    </junitreport>
+  </target>
+</project>
